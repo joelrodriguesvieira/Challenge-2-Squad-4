@@ -1,7 +1,7 @@
 {
   "name": "challenge-2-squad-4",
   "version": "1.0.0",
-  "description": "",
+  "description": "Repositório destinado ao segundo desafio da trilha AWS Full-Stack (Node.js and React.js)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
