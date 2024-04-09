@@ -1,0 +1,33 @@
+{
+  "name": "challenge-2-squad-4",
+  "version": "1.0.0",
+  "description": "Desafio 02 da Bolsa FullStack_Fev_2024, na qual vamos fazer uma API, que simula as principais atividades de um cinema, o Compacine.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricaSOS/Challenge-2-Squad-4.git"
+  },
+  "keywords": [
+    "compacine",
+    "api_cinema",
+    "javascript",
+    "node",
+    "mongodb",
+    "mongoose",
+    "express"
+  ],
+  "author": "Erica Santos, Joao Ferreira, Joel Rodrigues, Luan Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricaSOS/Challenge-2-Squad-4/issues"
+  },
+  "homepage": "https://github.com/EricaSOS/Challenge-2-Squad-4#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mogoose": "^0.0.1-security"
+  }
+}
