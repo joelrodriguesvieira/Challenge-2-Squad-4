@@ -1,25 +1,25 @@
 const mongoose = require('mongoose');
 
-const ingressoSchema = new mongoose.Schema({
-    cadeira: {
+const ticketSchema = new mongoose.Schema({
+    seat: {
         type: String,
         required: true,   
     },
-    valor: {
+    value: {
         type: Number,
         required: true,
     },    
-    sessao: {
+    session: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Sessoes',
+        ref: 'sessions',
         required: true,    
     },
-    filme: {
+    movie: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Filmes',
+        ref: 'movies',
         required: true,
     }
     
 });
 
-module.exports = mongoose.model('Ingressos', ingressoSchema);
+module.exports = mongoose.model('Tickets', ticketSchema);
