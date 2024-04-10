@@ -38,3 +38,5 @@ class MovieService {
         return deleteMovie
     }
 }
+
+module.exports = new MovieService()

@@ -38,3 +38,5 @@ class SessionService {
         return deleteSession
     }
 }
+
+module.exports = new SessionService()

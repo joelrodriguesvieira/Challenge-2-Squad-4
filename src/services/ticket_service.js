@@ -38,3 +38,5 @@ class TicketService {
         return deleteTicket
     }
 }
+
+module.exports = new TicketService()
