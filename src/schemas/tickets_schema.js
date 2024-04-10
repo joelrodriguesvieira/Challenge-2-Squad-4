@@ -11,12 +11,12 @@ const ticketSchema = new mongoose.Schema({
     },    
     session: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'sessions',
+        ref: 'Session',
         required: true,    
     },
     movie: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'movies',
+        ref: 'Movie',
         required: true,
     }
     

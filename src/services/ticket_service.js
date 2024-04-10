@@ -1,14 +1,26 @@
 const TicketModel = require('../schemas/tickets_schema')
+const SessionModel = require('../schemas/session_schema')
 
 class TicketService {
-    async createTicket(data) {
-        const newTicket = new TicketModel(data)
+    async createTicket({seat, value, session, movie}) {
+        const existSession = await SessionModel.findById(session)
+        if (!existSession) {
+            throw new Error('There is not this session')
+        }
+
+        const sessionCapacity = existSession.capacity
+        if (seat > sessionCapacity || seat < 0) {
+            throw new Error('Seat invailable')
+        }
+
+        const allTickets = await TicketModel.find({session})
+        const soldSeats = allTickets.map(ticket => ticket.seat)
+        if (soldSeats.includes(seat)) {
+            throw new Error('This seat already is not available')
+        }
+        const newTicket = new TicketModel({ movie: movie, session: session, seat: seat, value: value })
         await newTicket.save()
         return newTicket
-    }
-
-    async getTickets() {
-        return TicketModel.find()
     }
 
     async getTicket(id) {
@@ -18,24 +30,6 @@ class TicketService {
         }
 
         return ticket
-    }
-
-    async updateTicket(id, ticket) {
-        const updateTicket = await TicketModel.findByIdAndUpdate(id,ticket, { new: true })
-        if (!updateTicket) {
-            throw new Error('Ticket not found')
-        }
-
-        return updateTicket
-    }
-
-    async deleteTicket(id) {
-        const deleteTicket = await TicketModel.findByIdAndDelete(id)
-        if (!deleteTicket) {
-            throw new Error('Ticket not found')
-        }
-
-        return deleteTicket
     }
 }
 
