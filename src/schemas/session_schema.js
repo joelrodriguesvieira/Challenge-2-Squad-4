@@ -1,24 +1,24 @@
 const mongoose = require('mongoose');
 
-const sessaoSchema = new mongoose.Schema({
-    capacidade: {
+const sessionSchema = new mongoose.Schema({
+    capacity: {
         type: Number,
         required: true,
     },
-    sala: {
+    movieTheater: {
         type: String,
         required: true,   
     },    
-    horario: {
+    time: {
         type: Date,
         required: true,    
     },
-    filme: {
+    movie: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Filmes',
+        ref: 'movies',
         required: true,
     }
     
 });
 
-module.exports = mongoose.model('Sessoes', sessaoSchema);
+module.exports = mongoose.model('Sessions', sessionSchema);
