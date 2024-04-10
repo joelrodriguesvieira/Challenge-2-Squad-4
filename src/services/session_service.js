@@ -1,4 +1,4 @@
-const SessionModel = require('../schemas/sessao_schema')
+const SessionModel = require('../schemas/session_schema')
 
 class SessionService {
     async createSession(data) {

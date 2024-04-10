@@ -1,4 +1,4 @@
-const MovieModel = require('../schemas/filme_schema')
+const MovieModel = require('../schemas/movies_schema')
 
 class MovieService {
     async createMovie(data) {

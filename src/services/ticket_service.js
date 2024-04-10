@@ -1,4 +1,4 @@
-const TicketModel = require('../schemas/ingresso_schema')
+const TicketModel = require('../schemas/tickets_schema')
 
 class TicketService {
     async createTicket(data) {
