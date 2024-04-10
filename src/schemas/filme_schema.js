@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 
 const filmeSchema = new mongoose.Schema({
-    idFilme: {
-        type: String,
-        required: true,
-        unique: true,
-    },
     nome: {
         type: String,
         required: true,
