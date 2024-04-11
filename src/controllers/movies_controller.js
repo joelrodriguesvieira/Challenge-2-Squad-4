@@ -37,7 +37,7 @@ class MovieController {
         }
     }
 
-    async deleteCar(req, res) {
+    async deleteMovie(req, res) {
         try {
             const movie = await MovieService.deleteMovie(req.params.id);
             res.status(200).json(movie);
