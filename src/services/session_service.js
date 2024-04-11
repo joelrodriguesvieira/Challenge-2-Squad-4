@@ -12,7 +12,7 @@ class SessionService {
     }
 
     async getSession(id) {
-        const session = SessionModel.findById(id)       
+        const session = await SessionModel.findById(id)       
         if (!session || session === null) {
             throw new Error('Session not found')
         }

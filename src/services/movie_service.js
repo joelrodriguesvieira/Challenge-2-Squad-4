@@ -12,7 +12,7 @@ class MovieService {
     }
 
     async getMovie(id) {
-        const movie = MovieModel.findById(id)       
+        const movie = await MovieModel.findById(id)       
         if (!movie || movie === null) {
             throw new Error('Movie not found')
         }

@@ -24,7 +24,7 @@ class TicketService {
     }
 
     async getTicket(id) {
-        const ticket = TicketModel.findById(id)       
+        const ticket = await TicketModel.findById(id)       
         if (!ticket || ticket === null) {
             throw new Error('Ticket not found')
         }
