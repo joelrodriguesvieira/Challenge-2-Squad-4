@@ -4,9 +4,9 @@ const SessionController = require('../controllers/session_controller');
 const router = express.Router();
 
 router.post('/', SessionController.createSession);
-router.get('/', SessionController.getSession);
+router.get('/:id', SessionController.getSession);
 router.get('/', SessionController.getSessions);
-router.put('/', SessionController.updateSession);
-router.delete('/', SessionController.deleteSession);
+router.put('/:id', SessionController.updateSession);
+router.delete('/:id', SessionController.deleteSession);
 
 module.exports = router;
