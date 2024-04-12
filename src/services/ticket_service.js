@@ -23,6 +23,10 @@ class TicketService {
         return newTicket
     }
 
+    async getTickets() {
+        return TicketModel.find()
+    }
+
     async getTicket(id) {
         const ticket = await TicketModel.findById(id)       
         if (!ticket || ticket === null) {
@@ -30,6 +34,24 @@ class TicketService {
         }
 
         return ticket
+    }
+
+    async updateTicket(id, ticket) {
+        const updateTicket = await TicketModel.findByIdAndUpdate(id,ticket, { new: true })
+        if (!updateTicket) {
+            throw new Error('Ticket not found')
+        }
+
+        return updateTicket
+    }
+
+    async deleteTicket(id) {
+        const deleteTicket = await TicketModel.findByIdAndDelete(id)
+        if (!deleteTicket) {
+            throw new Error('Ticket not found')
+        }
+
+        return deleteTicket
     }
 }
 
