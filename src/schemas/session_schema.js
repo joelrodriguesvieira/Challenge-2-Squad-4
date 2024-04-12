@@ -15,10 +15,10 @@ const sessionSchema = new mongoose.Schema({
     },
     movie: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'movies',
+        ref: 'Movie',
         required: true,
     }
     
 });
 
-module.exports = mongoose.model('Sessions', sessionSchema);
+module.exports = mongoose.model('Session', sessionSchema);
