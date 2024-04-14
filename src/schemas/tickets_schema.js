@@ -10,13 +10,13 @@ const ticketSchema = new mongoose.Schema({
         required: true,
     },    
     session: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.Mixed,
         ref: 'Session',
         required: true,    
     },
     movie: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Movies',
+        type: mongoose.Schema.Types.Mixed,
+        ref: 'Movie',
         required: true,
     }
     

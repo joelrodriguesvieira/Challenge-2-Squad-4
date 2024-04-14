@@ -9,7 +9,7 @@ class TicketService {
             throw new Error('There is not this movie')
         }
 
-        const existSession = await SessionModel.findById(session)
+        const existSession = await SessionModel.findOne({ movieTheater: session})
         if (!existSession) {
             throw new Error('There is not this session')
         }
@@ -25,8 +25,7 @@ class TicketService {
             throw new Error('This seat already is not available')
         }
         const value = 10
-        // a linha abaixo é a parte referente a tratar nos atributos de 'movie' e 'session'
-        const newTicket = new TicketModel({ movie: movie._id, session: session, seat: seat, value: value })
+        const newTicket = new TicketModel({ movie: {name: existMovie.name,image: existMovie.image,description: existMovie.description,cast: existMovie.cast,genre: existMovie.genre},session: {capacity: existSession.capacity,movieTheater: existSession.movieTheater,time: existSession.time,movie: existSession.movie},seat: seat, value: value })
         await newTicket.save()
         return newTicket
     }
