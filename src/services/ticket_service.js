@@ -1,8 +1,14 @@
 const TicketModel = require('../schemas/tickets_schema')
 const SessionModel = require('../schemas/session_schema')
+const MovieModel = require('../schemas/movies_schema')
 
 class TicketService {
-    async createTicket({seat, value, session, movie}) {
+    async createTicket({seat, session, movie}) {
+        const existMovie = await MovieModel.findOne({name: movie})
+        if (!existMovie) {
+            throw new Error('There is not this movie')
+        }
+
         const existSession = await SessionModel.findById(session)
         if (!existSession) {
             throw new Error('There is not this session')
@@ -18,7 +24,9 @@ class TicketService {
         if (soldSeats.includes(seat)) {
             throw new Error('This seat already is not available')
         }
-        const newTicket = new TicketModel({ movie: movie, session: session, seat: seat, value: value })
+        const value = 10
+        // a linha abaixo é a parte referente a tratar nos atributos de 'movie' e 'session'
+        const newTicket = new TicketModel({ movie: movie._id, session: session, seat: seat, value: value })
         await newTicket.save()
         return newTicket
     }
