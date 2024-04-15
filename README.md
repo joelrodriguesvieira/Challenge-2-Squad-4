@@ -15,24 +15,29 @@
 <p>Orientamos a utilização da IDE VS Code.</p>
 
 <h2>Configurações do arquivo ".env"</h2>
-```
-PORT = 3000
-MONGODB_URI = mongodb://root:example@localhost:27017
-```
+<pre>
+    <code>
+        PORT = 3000
+        MONGODB_URI = mongodb://root:example@localhost:27017    
+    </code>
+</pre>
+
 <h2>Como usar a aplicação</h2>
 <ol>
-    <li>Clone o repositório;<li>
-    <li>Acesse a pasta pelo VS Code;<li>
-    <li>Crie um arquivo ".env", na própria pasta do projeto (Chanllege-2-Squad-4) e insira as configurações discriminadas no item anterior;<li>
-    <li>Abra o terminal do VS Code e instale as dependências necessárias, por meio do código abaixo:<li>
-    ```
-    npm install
-    ```
-    <li>Baixe o Docker desktop e abra;<li>
-    <li>Abra o terminal no VS Code e digite os seguintes comandos:<li>
+    <li>Clone o repositório;</li>
+    <li>Acesse a pasta pelo VS Code;</li>
+    <li>Crie um arquivo ".env", na própria pasta do projeto (Chanllege-2-Squad-4) e insira as configurações discriminadas no item anterior;</li>
+    <li>Abra o terminal do VS Code e instale as dependências necessárias, por meio do código abaixo:</li>
+        <pre>
+            <code>
+                npm install
+            </code>
+        </pre>
+    <li>Baixe o Docker desktop e abra;</li>
+    <li>Abra o terminal no VS Code e digite os seguintes comandos:</li>
         <p>docker-compose up -d</p>
         <p>Aperte Enter</p>
         <p>npm start</p>
         <p>Aperte Enter, novamente.</p>
-    <li>Abra o seu navegador<li>
+    <li>Abra o seu navegador</li>
 </ol>
