@@ -1,8 +1,13 @@
 const SessionModel = require('../schemas/session_schema')
+const MovieModel = require('../schemas/movies_schema')
 
 class SessionService {
-    async createSession(data) {
-        const newSession = new SessionModel(data)
+    async createSession({capacity, movieTheater, time, movie}) {
+        const existFilm = await MovieModel.findOne({name: movie})
+        if (!existFilm) {
+            throw new Error('Movie not found')
+        }
+        const newSession = new SessionModel({capacity: capacity, movieTheater: movieTheater, time: time, movie:existFilm.name})
         await newSession.save()
         return newSession
     }
