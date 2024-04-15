@@ -2,7 +2,7 @@
 
 <p>Repositório destinado ao segundo desafio da trilha AWS Full-Stack (Node.js and React.js), que prevê a criação de uma Aplication Programming Interface (API) para a compra de ingressos de cinema.</p>
 
-<h2>Tecnologias/Dependências Utilizadas</h2>
+## :rocket: Tecnologias/Dependências Utilizadas
 <ul>
     <li>Javascript</li>
     <li>Node.js</li>
@@ -14,13 +14,15 @@
 </ul>
 <p>Orientamos a utilização da IDE VS Code.</p>
 
-<h2>Configurações do arquivo ".env"</h2>
-<pre><code>
-    PORT = 3000
-    MONGODB_URI = mongodb://root:example@localhost:27017    
-    </code></pre>
+## :floppy_disk: Configurações do arquivo ".env"
+<pre>
+    <code>
+        PORT = 3000
+        MONGODB_URI = mongodb://root:example@localhost:27017    
+    </code>
+</pre>
 
-<h2>Como usar a aplicação</h2>
+## :memo: Como usar a aplicação
 <ol>
     <li>Clone o repositório;</li>
     <li>Acesse a pasta pelo VS Code;</li>
