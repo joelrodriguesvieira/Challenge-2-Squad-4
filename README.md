@@ -14,7 +14,7 @@
 </ul>
 <p>Orientamos a utilização da IDE VS Code.</p>
 
-<h2>Configurações do arquivo ".env"</h2>
+## :floppy_disk: Configurações do arquivo ".env"
 <pre>
     <code>
         PORT = 3000
