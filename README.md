@@ -39,8 +39,8 @@
         <p>Pressione a tecla "Enter", novamente. No terminal deve aparecer a mensagem: "Server is running on port 3000" e "Connected to database"</p>
     <li>Use um testador de API de sua preferência, por exemplo Postman ou Insomia, para relizar o teste, colocando os seguintes dados:</li>
         <p>- Escolha "POST", para criar um novo filme;</p>
-        <p>- Na barra de endereço, insira: <http://localhost:3000/api/movie>;</p>
-        <p>- No "body", inclua as linhas abaixo: <http://localhost:3000/api/movie>;</p>
+        <p>- Na barra de endereço, insira: http://localhost:3000/api/movie;</p>
+        <p>- No "body", inclua as linhas abaixo: http://localhost:3000/api/movie;</p>
         <pre><code>
             {
                 "name": "Eu, eu mesmo e Irene",
@@ -51,7 +51,7 @@
             }
         </code></pre>
         <p>- Clicar em "send".</p>
-    <li>Abra o seu navegador de internet e insira na barra de endereço o seguinte <http://localhost:8081>. Será aberta uma página Mongo Express;</li>
+    <li>Abra o seu navegador de internet e insira na barra de endereço o seguinte http://localhost:8081. Será aberta uma página Mongo Express;</li>
     <li>Basta clicar sobre o nome do arquivo criado durante o teste.</li>
 </ol>
 
