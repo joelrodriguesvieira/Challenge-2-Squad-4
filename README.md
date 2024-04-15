@@ -4,13 +4,13 @@
 
 <h2>Tecnologias/Dependências Utilizadas</h2>
 <ul>
-    <li>Javascript<li>
-    <li>Node.js<li>
-    <li>Docker<li>
-    <li>MongoDB<li>
-    <li>Express<li>
-    <li>Mongoose<li>
-    <li>Dotenv<li>    
+    <li>Javascript</li>
+    <li>Node.js</li>
+    <li>Docker</li>
+    <li>MongoDB</li>
+    <li>Express</li>
+    <li>Mongoose</li>
+    <li>Dotenv</li>    
 </ul>
 <p>Orientamos a utilização da IDE VS Code.</p>
 
