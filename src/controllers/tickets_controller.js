@@ -27,24 +27,6 @@ class TicketController {
             res.status(500).json({ error: err.message });
         }
     }
-
-    async updateTicket(req, res) {
-        try {
-            const ticket = await TicketService.updateTicket(req.params.id);
-            res.status(200).json(ticket);
-        } catch (err) {
-            res.status(500).json({ error: err.message });
-        }
-    }
-
-    async deleteTicket(req, res) {
-        try {
-            const ticket = await TicketService.deleteTicket(req.params.id);
-            res.status(200).json(ticket);
-        } catch (err) {
-            res.status(500).json({ error: err.message });
-        }
-    }
 }
 
 module.exports = new TicketController();

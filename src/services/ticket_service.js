@@ -1,9 +1,15 @@
 const TicketModel = require('../schemas/tickets_schema')
 const SessionModel = require('../schemas/session_schema')
+const MovieModel = require('../schemas/movies_schema')
 
 class TicketService {
-    async createTicket({seat, value, session, movie}) {
-        const existSession = await SessionModel.findById(session)
+    async createTicket({seat, session, movie}) {
+        const existMovie = await MovieModel.findOne({name: movie})
+        if (!existMovie) {
+            throw new Error('There is not this movie')
+        }
+
+        const existSession = await SessionModel.findOne({ movieTheater: session})
         if (!existSession) {
             throw new Error('There is not this session')
         }
@@ -18,7 +24,8 @@ class TicketService {
         if (soldSeats.includes(seat)) {
             throw new Error('This seat already is not available')
         }
-        const newTicket = new TicketModel({ movie: movie, session: session, seat: seat, value: value })
+        const value = 10
+        const newTicket = new TicketModel({ movie: {name: existMovie.name,image: existMovie.image,description: existMovie.description,cast: existMovie.cast,genre: existMovie.genre},session: {capacity: existSession.capacity,movieTheater: existSession.movieTheater,time: existSession.time,movie: existSession.movie},seat: seat, value: value })
         await newTicket.save()
         return newTicket
     }

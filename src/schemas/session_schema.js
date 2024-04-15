@@ -14,7 +14,7 @@ const sessionSchema = new mongoose.Schema({
         required: true,    
     },
     movie: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         ref: 'Movie',
         required: true,
     }
