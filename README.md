@@ -2,6 +2,7 @@
 
 <p>Repositório destinado ao segundo desafio da trilha AWS Full-Stack (Node.js and React.js), que prevê a criação de uma Aplication Programming Interface (API) para a compra de ingressos de cinema.</p>
 
+## :rocket: Technologies
 <h2>Tecnologias/Dependências Utilizadas</h2>
 <ul>
     <li>Javascript</li>
